@@ -1,0 +1,195 @@
+.header {
+    padding-top: 12px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #E9E9EA;;
+}
+
+.header__info-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    padding-bottom: 9px;
+}
+
+.header__lang-button {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: $gray;
+    opacity: 0.6;
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.header__lang-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.lang-more-button {
+    display: none;
+    width: 19px;
+    height: 3px;
+    background: url(/img/lan-hambur.svg) no-repeat center center;
+}
+
+.lang-button--active {
+    color: $black;
+    opacity: 1;
+}
+
+.header__form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.header__form {
+    border: 2px solid #0aa9b4;
+    border-radius: $border-radius;
+    width: calc(100% - 100px);
+    position: relative;
+
+}
+
+.header__form-input {
+    padding: 20px 102px 23px 25px;
+    font-size: 18px;
+    line-height: 140%;
+}
+
+.select-input {
+    appearance: none;
+    border-right: 2px solid #0aa9b4;
+    
+}
+
+.header__form-selected-span {
+    width: 10px;
+    height: 6px;
+    position: absolute;
+    background: url(/img/select-after.png) no-repeat center center;
+    top: 31px;
+    left: 165px;
+}
+
+.header__form-button {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
+@media only screen and (max-width:$middle-size) {
+    .header__form {
+        width: calc(100% - 100px);
+    }
+}
+
+@media only screen and (max-width:$tablet) {
+    .header__form {
+        width: calc(100% - 78px);
+    }
+}
+
+@media only screen and (max-width:690px) {
+    .header__form-input {
+        padding: 15px 50px 18px 20px;
+    }
+
+    .header__form-selected-span {
+        left: 120px;
+        top: 26px;
+    }
+
+    .txt-input {
+        padding-right: 20px;
+    }
+
+    .header__form-button {
+        top: 19px;
+    }
+}
+
+@media only screen and (max-width:532px) {
+    .header__form {
+        width: calc(100% - 53px);
+    }
+
+    .header__hamburger-logo {
+        width: 25px;
+        height: 15px;
+    }
+
+    .header__form-selected-span {
+        left: 75px;
+        top: 17px;
+    }
+
+    .header__form-button {
+        top: 10px;
+    }
+
+    .header__logo-img {
+        width: 134px;
+        height: 27px;
+    }
+
+    .header__form-input {
+        padding: 10px 28px 12px 10px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:395px) {
+    .header__form-input {
+        font-size: 12px;
+    }
+
+    .txt-input {
+        padding-right: 10px;
+    }
+
+    .header__form-selected-span {
+        left: 65px;
+        top: 16px;
+    }
+}
+
+@media only screen and (max-width:$mobile) {
+    .header__form-button {
+        display: none;
+    }
+
+    .header__lang-button {
+        display: none;
+    }
+
+    .lang-more-button {
+        display: block;
+    }
+
+    .lang-button--active {
+        display: block;
+        position: relative;
+
+        &::after {
+            width: 7px;
+            height: 4px;
+            content: '';
+            position: absolute;
+            background: url(/img/select-after.png) no-repeat center center;
+            left: -12px;
+            top: 12px;
+        }
+    }
+}
+@media only screen and (max-width:342px){
+.txt-input{
+    width: 80px;
+}
+}
